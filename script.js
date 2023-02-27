@@ -66,8 +66,3 @@ getQuote();
 
 newQbtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweet);
-
-const hi = function () {
-  console.log('hi');
-};
-hi();
