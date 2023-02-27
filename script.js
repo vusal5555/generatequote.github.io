@@ -1,5 +1,8 @@
 // https://jacintodesign.github.io/quotes-api/data/quotes.json
 
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const quoteAuthor = document.getElementById('author');
@@ -63,3 +66,8 @@ getQuote();
 
 newQbtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweet);
+
+const hi = function () {
+  console.log('hi');
+};
+hi();
