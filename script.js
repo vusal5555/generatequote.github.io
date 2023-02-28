@@ -42,6 +42,7 @@ const newQuote = function () {
   removeLoadingspinner();
 };
 
+//Get quote from api
 const getQuote = async function () {
   try {
     showLoadingspinner();
@@ -52,12 +53,13 @@ const getQuote = async function () {
     data = await res.json();
 
     newQuote();
+    throw new Error('oops');
   } catch (err) {
     console.log(err);
   }
 };
 
-const tweet = function () {
+const tweetQuote = function () {
   const tweet = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${quoteAuthor.textContent}`;
   window.open(tweet, '_blank');
 };
@@ -65,4 +67,4 @@ const tweet = function () {
 getQuote();
 
 newQbtn.addEventListener('click', newQuote);
-twitterBtn.addEventListener('click', tweet);
+twitterBtn.addEventListener('click', tweetQuote);
