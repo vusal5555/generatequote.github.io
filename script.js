@@ -66,3 +66,9 @@ getQuote();
 
 newQbtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweet);
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+};
+
+calcAge(2001);
